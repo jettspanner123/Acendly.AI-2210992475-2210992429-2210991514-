@@ -1,9 +1,4 @@
-# Acendly.ai
-
-![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blueviolet?style=for-the-badge&logo=apple&labelColor=blueviolet)
-![Version](https://img.shields.io/badge/version-0.0.1-orange?style=for-the-badge&logo=semantic-release&labelColor=orange)
-![Status](https://img.shields.io/badge/status-active-brightgreen?style=for-the-badge&logo=rocket&labelColor=brightgreen)
-![Code Style](https://img.shields.io/badge/code%20style-prettier-ff69b4?style=for-the-badge&logo=prettier&labelColor=ff69b4)
+# ⚡ Acendly.ai
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white&labelColor=ce422b&color=ce422b)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB&color=3776AB)
@@ -14,19 +9,19 @@
 
 ---
 
-# Welcome to Acendly.ai
+# 🌟 Welcome to Acendly.ai
 
 Acendly.ai is a multi-language, multi-service AI platform designed for rapid development, experimentation, and deployment of advanced AI and data processing workflows.
 
-## Features
-- Rust-based AST (abstract syntax tree) / semantic summarization engine
-- Python vector embedding service
-- .NET/C# coordinator for orchestration
-- Cross-platform support
+## ✨ Features
+- 🦀 Rust-based AST (abstract syntax tree) / semantic summarization engine
+- 🐍 Python vector embedding service
+- ⚙️ .NET/C# coordinator for orchestration
+- 🌐 Cross-platform support
 
 ---
 
-## Project Structure
+## 📦 Project Structure
 
 ```
 ├── coordinator/           # .NET C# Orchestration Service
@@ -37,50 +32,50 @@ Acendly.ai is a multi-language, multi-service AI platform designed for rapid dev
 
 ---
 
-## Languages & Frameworks
+## 🖥️ Languages & Frameworks
 
 | Language | Main Frameworks / Libraries |
 |----------|-----------------------------|
-| **Rust** | Cargo, [tree-sitter](https://tree-sitter.github.io/tree-sitter/), [tokio](https://tokio.rs/), [serde](https://serde.rs/) |
-| **Python** | [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), [Pydantic](https://docs.pydantic.dev/), [pgvector](https://github.com/pgvector/pgvector), [Ollama](https://ollama.com/) |
-| **C# (.NET)** | .NET 10, ASP.NET Core, OpenAPI |
+| 🦀 **Rust** | Cargo, [tree-sitter](https://tree-sitter.github.io/tree-sitter/), [tokio](https://tokio.rs/), [serde](https://serde.rs/) |
+| 🐍 **Python** | [FastAPI](https://fastapi.tiangolo.com/), [SQLAlchemy](https://www.sqlalchemy.org/), [Pydantic](https://docs.pydantic.dev/), [pgvector](https://github.com/pgvector/pgvector), [Ollama](https://ollama.com/) |
+| ⚙️ **C# (.NET)** | .NET 10, ASP.NET Core, OpenAPI |
 
 ---
 
-## Technology Usage Details
+## 🧩 Technology Usage Details
 
 | Technology | Where it's used (path) | What it does in this repo |
 |------------|-------------------------|----------------------------|
-| **Rust** | `semantic_summarizer/` | Implements the semantic summarization / AST service. |
-| **tree-sitter** | `semantic_summarizer/src/helpers/ASTServiceHelper.rs` | Parses source text into an AST (`Parser`, `Tree`, `Node`). |
-| **tree-sitter-typescript** | `semantic_summarizer/src/helpers/ASTServiceHelper.rs` | Supplies the TypeScript grammar used during parsing. |
-| **tokio** | `semantic_summarizer/src/main.rs` | Provides the async runtime for the Rust service entrypoint. |
-| **serde** | `semantic_summarizer/src/models/response/BaseResponse.rs` | Derives serialization for response models. |
-| **serde_json** | `semantic_summarizer/Cargo.toml` | Declared dependency (no in-code references yet). |
-| **axum** | `semantic_summarizer/Cargo.toml` | Declared dependency (no in-code references yet). |
-| **Python** | `vector_embedder/` | Implements the embedding API service. |
-| **FastAPI** | `vector_embedder/stores/RootApplicationStore.py`, `vector_embedder/controllers/*` | Defines the API application and routers/endpoints. |
-| **Pydantic** | `vector_embedder/models/request/*`, `vector_embedder/models/response/*` | Request/response DTO validation and typing. |
-| **SQLAlchemy** | `vector_embedder/database/*`, `vector_embedder/controllers/EmbeddingController.py` | Database engine config, ORM models, and query/session usage. |
-| **pgvector** | `vector_embedder/database/entities/OP_EmbeddingTBL.py` | Vector column type used to store embeddings and perform similarity queries. |
-| **Ollama** | `vector_embedder/services/EmbeddingService.py` | Generates embeddings via `ollama.embed(...)`. |
-| **C# / .NET 10** | `coordinator/` | Coordinator/orchestration service skeleton. |
-| **ASP.NET Core** | `coordinator/Program.cs`, `coordinator/Controllers/ASTController.cs` | Minimal API host + controller scaffolding. |
-| **Microsoft.AspNetCore.OpenApi** | `coordinator/Program.cs` | Adds OpenAPI endpoints in development. |
-| **Node.js (npm scripts)** | `package.json` | Runs dev helper scripts from the repo root. |
-| **Bash** | `scripts/dev-open.sh`, `scripts/dev-secrets.sh` | Local dev convenience scripts sourced by npm scripts. |
+| 🦀 **Rust** | `semantic_summarizer/` | Implements the semantic summarization / AST service. |
+| 🌲 **tree-sitter** | `semantic_summarizer/src/helpers/ASTServiceHelper.rs` | Parses source text into an AST (`Parser`, `Tree`, `Node`). |
+| 📘 **tree-sitter-typescript** | `semantic_summarizer/src/helpers/ASTServiceHelper.rs` | Supplies the TypeScript grammar used during parsing. |
+| ⚡ **tokio** | `semantic_summarizer/src/main.rs` | Provides the async runtime for the Rust service entrypoint. |
+| 🔧 **serde** | `semantic_summarizer/src/models/response/BaseResponse.rs` | Derives serialization for response models. |
+| 📄 **serde_json** | `semantic_summarizer/Cargo.toml` | Declared dependency (no in-code references yet). |
+| 🪓 **axum** | `semantic_summarizer/Cargo.toml` | Declared dependency (no in-code references yet). |
+| 🐍 **Python** | `vector_embedder/` | Implements the embedding API service. |
+| 🚀 **FastAPI** | `vector_embedder/stores/RootApplicationStore.py`, `vector_embedder/controllers/*` | Defines the API application and routers/endpoints. |
+| 🔍 **Pydantic** | `vector_embedder/models/request/*`, `vector_embedder/models/response/*` | Request/response DTO validation and typing. |
+| 🗄️ **SQLAlchemy** | `vector_embedder/database/*`, `vector_embedder/controllers/EmbeddingController.py` | Database engine config, ORM models, and query/session usage. |
+| 🧮 **pgvector** | `vector_embedder/database/entities/OP_EmbeddingTBL.py` | Vector column type used to store embeddings and perform similarity queries. |
+| 🤖 **Ollama** | `vector_embedder/services/EmbeddingService.py` | Generates embeddings via `ollama.embed(...)`. |
+| ⚙️ **C# / .NET 10** | `coordinator/` | Coordinator/orchestration service skeleton. |
+| 🌐 **ASP.NET Core** | `coordinator/Program.cs`, `coordinator/Controllers/ASTController.cs` | Minimal API host + controller scaffolding. |
+| 📖 **Microsoft.AspNetCore.OpenApi** | `coordinator/Program.cs` | Adds OpenAPI endpoints in development. |
+| 📦 **Node.js (npm scripts)** | `package.json` | Runs dev helper scripts from the repo root. |
+| 🔨 **Bash** | `scripts/dev-open.sh`, `scripts/dev-secrets.sh` | Local dev convenience scripts sourced by npm scripts. |
 
 ---
 
-## Key Directories
-- **coordinator/**: .NET C# service for orchestration
-- **semantic_summarizer/**: Rust summarization engine
-- **vector_embedder/**: Python embedding and AI services
-- **scripts/**: Utility scripts for development
+## 📁 Key Directories
+- ⚙️ **coordinator/**: .NET C# service for orchestration
+- 🦀 **semantic_summarizer/**: Rust summarization engine
+- 🐍 **vector_embedder/**: Python embedding and AI services
+- 🔨 **scripts/**: Utility scripts for development
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 1. **Clone the repo**
    ```bash
@@ -92,16 +87,16 @@ Acendly.ai is a multi-language, multi-service AI platform designed for rapid dev
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 We love contributions! Feel free to open issues, submit PRs, or suggest features.
 
 ---
 
-## Connect
-- [GitHub](https://github.com/jettspanner123/Acendly.ai)
-- Issues & Discussions: Use the GitHub repo
+## 🌐 Connect
+- 🐙 [GitHub](https://github.com/jettspanner123/Acendly.ai)
+- 💬 Issues & Discussions: Use the GitHub repo
 
 ---
 
-> _Happy hacking!_
+> _Happy hacking!_ 🚀✨
