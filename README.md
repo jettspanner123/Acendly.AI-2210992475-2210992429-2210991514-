@@ -13,6 +13,16 @@
 
 Acendly.ai is a multi-language, multi-service AI platform designed for rapid development, experimentation, and deployment of advanced AI and data processing workflows.
 
+## 👨‍💻 Team
+
+| | Name | Roll Number | Email |
+|---|------|-------------|-------|
+| 👤 | **Uddeshya Singh** | 2210992475 | [uddeshya2475.be22@chitkara.edu.in](mailto:uddeshya2475.be22@chitkara.edu.in) |
+| 👤 | **Suvogyan Chakraborty** | 2210992429 | [suvogyan2429.be22@chitkara.edu.in](mailto:suvogyan2429.be22@chitkara.edu.in) |
+| 👤 | **Diganta Mitra** | 2210991514 | [diganta1514.be22@chitkara.edu.in](mailto:diganta1514.be22@chitkara.edu.in) |
+
+---
+
 ## ✨ Features
 - 🦀 Rust-based AST (abstract syntax tree) / semantic summarization engine
 - 🐍 Python vector embedding service
@@ -87,14 +97,6 @@ Acendly.ai is a multi-language, multi-service AI platform designed for rapid dev
 
 ---
 
-## 👨‍💻 Team
 
-| | Name | Roll Number | Email |
-|---|------|-------------|-------|
-| 👤 | **Uddeshya Singh** | 2210992475 | [uddeshya2475.be22@chitkara.edu.in](mailto:uddeshya2475.be22@chitkara.edu.in) |
-| 👤 | **Suvogyan Chakraborty** | 2210992429 | [suvogyan2429.be22@chitkara.edu.in](mailto:suvogyan2429.be22@chitkara.edu.in) |
-| 👤 | **Diganta Mitra** | 2210991514 | [diganta1514.be22@chitkara.edu.in](mailto:diganta1514.be22@chitkara.edu.in) |
-
----
 
 > _Happy hacking!_ 🚀✨
