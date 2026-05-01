@@ -6,6 +6,7 @@ use crate::models::response::AstChunk::AstChunk;
 pub struct AstTransferPayload {
     pub language: String,
     pub version: String,
+    pub has_errors: bool,
     pub ast: AstNode,
     pub chunks: Vec<AstChunk>,
 }

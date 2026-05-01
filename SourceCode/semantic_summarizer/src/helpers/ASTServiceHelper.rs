@@ -195,3 +195,51 @@ fn build_human_readable_text(node: &AstNode) -> String {
         _ => format!("{} node at line {}", node.node_type, node.loc.as_ref().map_or(0, |l| l.start.line)),
     }
 }
+
+/// Render a tree-sitter Tree as an indented plain-text AST.
+///
+/// Each line follows the pattern:
+///   <indent><node_type> [<start_line>:<start_col> - <end_line>:<end_col>]  (<text>)
+///
+/// Named nodes are printed normally; anonymous (syntax) nodes are shown in
+/// quotes so they are visually distinct.
+pub fn render_ast_as_text(tree: &Tree, source: &[u8]) -> String {
+    let mut output = String::new();
+    render_node(tree.root_node(), source, 0, &mut output);
+    output
+}
+
+fn render_node(node: Node, source: &[u8], depth: usize, output: &mut String) {
+    let indent = "  ".repeat(depth);
+
+    // Show anonymous nodes in quotes to distinguish them from named node types
+    let label = if node.is_named() {
+        node.kind().to_string()
+    } else {
+        format!("\"{}\"", node.kind())
+    };
+
+    let start = node.start_position();
+    let end   = node.end_position();
+    let loc   = format!("[{}:{} - {}:{}]", start.row + 1, start.column, end.row + 1, end.column);
+
+    // For leaf nodes attach the source text so the tree is self-contained
+    let leaf_text = if node.child_count() == 0 {
+        node.utf8_text(source)
+            .ok()
+            .map(|t| {
+                let trimmed = t.trim();
+                if trimmed.is_empty() { String::new() } else { format!("  ({})", trimmed) }
+            })
+            .unwrap_or_default()
+    } else {
+        String::new()
+    };
+
+    output.push_str(&format!("{}{} {}{}\n", indent, label, loc, leaf_text));
+
+    let mut cursor = node.walk();
+    for child in node.children(&mut cursor) {
+        render_node(child, source, depth + 1, output);
+    }
+}

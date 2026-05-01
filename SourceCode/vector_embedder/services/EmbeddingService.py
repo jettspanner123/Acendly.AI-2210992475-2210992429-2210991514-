@@ -1,9 +1,6 @@
 from typing import List
-
 import ollama
-
 from constants.EmbeddingCON import EmbeddingCON
-
 
 class EmbeddingService:
 
