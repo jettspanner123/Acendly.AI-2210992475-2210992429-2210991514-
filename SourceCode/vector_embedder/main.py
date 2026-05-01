@@ -1,5 +1,6 @@
 from config.AlchemyEngineConfig import AlchemyEngineConfig
 from controllers.AIController import AI_ROUTER
+from controllers.AstEmbeddingController import AST_EMBEDDING_ROUTER
 from controllers.EmbeddingController import EMBEDDING_ROUTER
 from database.AlchemyEngineStore import AlchemyEngineStore
 from database.entities.DBase import DBase
@@ -19,3 +20,4 @@ AlchemyEngineConfig.make_sure_pg_vector_exists(AlchemyEngine)
 # Adding Controllers
 application.include_router(AI_ROUTER)
 application.include_router(EMBEDDING_ROUTER)
+application.include_router(AST_EMBEDDING_ROUTER)
